@@ -2,22 +2,21 @@ package main
 
 import (
 	"fmt"
+	"project/utils"
 )
 
 func main() {
-	fmt.Printf("%+v\n", createGoEvent())
-}
+	slice := []int{0, 1, 12, 13, 15}
 
-type Event struct {
-	Title    string
-	Date     string
-	Location string
-}
+	if result, err := utils.FindLongest(slice); err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(result)
+	}
 
-func createGoEvent() Event {
-	return Event{
-		Title:    "День рождения Golang",
-		Date:     "10 ноября 2009",
-		Location: "10 ноября 2009",
+	if result, err := utils.FindLongest([]int{}); err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(result)
 	}
 }
