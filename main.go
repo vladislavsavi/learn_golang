@@ -1,23 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
+import "project/wariors"
 
 func main() {
-	fmt.Printf("%+v\n", createGoEvent())
-}
+	mag, _ := wariors.NewMage("Maga")
+	war, _ := wariors.NewWarrior("War")
+	arch, _ := wariors.NewArcher("Arch")
 
-type Event struct {
-	Title    string
-	Date     string
-	Location string
-}
-
-func createGoEvent() Event {
-	return Event{
-		Title:    "День рождения Golang",
-		Date:     "10 ноября 2009",
-		Location: "10 ноября 2009",
-	}
+	wariors.Fight([]wariors.Character{mag, war, arch})
 }
