@@ -1,11 +1,16 @@
 package main
 
-import "project/wariors"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 func main() {
-	mag, _ := wariors.NewMage("Maga")
-	war, _ := wariors.NewWarrior("War")
-	arch, _ := wariors.NewArcher("Arch")
+	fmt.Print("Введите что-то: ")
+	reader := bufio.NewScanner(os.Stdin)
 
-	wariors.Fight([]wariors.Character{mag, war, arch})
+	for reader.Scan() {
+		fmt.Println(reader.Text())
+	}
 }
