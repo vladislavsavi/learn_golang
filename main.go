@@ -1,16 +1,15 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
+	"project/utils"
 )
 
 func main() {
-	fmt.Print("Введите что-то: ")
-	reader := bufio.NewScanner(os.Stdin)
+	slice := []int{2, 12, 3, 1, 11, 10}
+	fmt.Println(slice)
 
-	for reader.Scan() {
-		fmt.Println(reader.Text())
-	}
+	utils.BubleSort(slice)
+
+	fmt.Println(slice)
 }
