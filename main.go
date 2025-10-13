@@ -10,6 +10,7 @@ func main() {
 	fmt.Println(slice)
 
 	utils.BubleSort(slice)
-
 	fmt.Println(slice)
+
+	fmt.Println(utils.BinarySearch(slice, 11))
 }
