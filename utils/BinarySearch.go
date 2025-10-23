@@ -12,7 +12,6 @@ func BinarySearch(s []int, search_value int) (index int) {
 		case s[mid_point] == search_value:
 			return mid_point
 		case s[mid_point] < search_value:
-			// Искомое значение БОЛЬШЕ, ищем в правой (верхней) половине
 			lower_bound = mid_point + 1
 		case s[mid_point] > search_value:
 			upper_bound = mid_point - 1
